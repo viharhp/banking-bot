@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transaction List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Transaction List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2023-07-25</td>
+        <td>Rohit</td>
+        <td>$1000.00</td>
+      </tr>
+      <tr>
+        <td>2023-07-24</td>
+        <td>Amazon</td>
+        <td>-$50.00</td>
+      </tr>
+      <tr>
+        <td>2023-07-30</td>
+        <td>Alex</td>
+        <td>$50.00</td>
+      </tr>
+      <tr>
+        <td>2023-05-24</td>
+        <td>Max</td>
+        <td>$500.00</td>
+      </tr>
+      <!-- Add more rows for additional transactions -->
+    </tbody>
+  </table>
+</body>
+</html>
+
+{% endblock %}

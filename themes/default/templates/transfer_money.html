@@ -1,0 +1,88 @@
+{% extends 'index.html' %}
+{% block styles %}
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 80%;
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+select, input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+</style>
+
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Transfer Funds</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Transfer Funds</h1>
+        <form action="/" method="POST">
+            <label for="fromAccount">From Account:</label>
+            <select id="fromAccount" name="fromAccount" required>
+                <option value="account1">Chequing</option>
+                <option value="account2">Savings</option>
+                <!-- Add more account options here -->
+            </select>
+            <label for="toAccount">To Account:</label>
+            <select id="toAccount" name="toAccount" required>
+                <option value="account1">Savings</option>
+                <option value="account2">Chequing</option>
+                <!-- Add more account options here -->
+            </select>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+            <button type="submit">Transfer Funds</button>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}
